@@ -1,0 +1,50 @@
+root@dribbleb:~# ifconfig
+eth1      Link encap:Ethernet  HWaddr 90:A2:DA:F8:0C:88  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:4 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:64 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:64 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:6691 (6.5 KiB)  TX bytes:6691 (6.5 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr 90:A2:DA:F0:0C:88  
+          inet addr:192.168.1.13  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:3386 errors:0 dropped:373 overruns:0 frame:0
+          TX packets:830 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:1360167 (1.2 MiB)  TX bytes:93349 (91.1 KiB)
+
+root@dribbleb:~# ping download.linino.org
+PING download.linino.org (88.198.63.58): 56 data bytes
+64 bytes from 88.198.63.58: seq=0 ttl=250 time=194.131 ms
+64 bytes from 88.198.63.58: seq=1 ttl=250 time=188.743 ms
+64 bytes from 88.198.63.58: seq=2 ttl=250 time=194.145 ms
+64 bytes from 88.198.63.58: seq=3 ttl=250 time=200.616 ms
+64 bytes from 88.198.63.58: seq=4 ttl=250 time=195.573 ms
+64 bytes from 88.198.63.58: seq=5 ttl=250 time=196.449 ms
+64 bytes from 88.198.63.58: seq=6 ttl=250 time=198.029 ms
+64 bytes from 88.198.63.58: seq=7 ttl=250 time=204.724 ms
+64 bytes from 88.198.63.58: seq=8 ttl=250 time=197.963 ms
+64 bytes from 88.198.63.58: seq=9 ttl=250 time=197.892 ms
+64 bytes from 88.198.63.58: seq=10 ttl=250 time=195.869 ms
+64 bytes from 88.198.63.58: seq=11 ttl=250 time=196.871 ms
+64 bytes from 88.198.63.58: seq=12 ttl=250 time=197.131 ms
+^C
+--- download.linino.org ping statistics ---
+13 packets transmitted, 13 packets received, 0% packet loss
+round-trip min/avg/max = 188.743/196.779/204.724 ms
+root@dribbleb:~# opkg update
+Downloading http://downloads.arduino.cc/openwrtyun/1/packages/Packages.gz.
+Updated list of available packages in /var/opkg-lists/attitude_adjustment.
+Downloading http://downloads.arduino.cc/openwrtyun/1/packages/Packages.sig.
+Signature check failed.
+Remove wrong Signature file.
